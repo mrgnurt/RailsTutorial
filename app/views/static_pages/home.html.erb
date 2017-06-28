@@ -1,0 +1,15 @@
+<% provide :title, t(".title_page") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield :title %><%= t "static_pages.title_page_general" %></title>
+  </head>
+  <body>
+    <h1><%= t ".title_page" %></h1>
+    <p>
+      <%= t ".this" %>
+      <%= link_to t("static_pages.ruby"), "http://www.railstutorial.org/" %>
+      <%= t ".sample" %>
+    </p>
+  </body>
+</html>
