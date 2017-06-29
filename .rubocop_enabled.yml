@@ -1,6 +1,6 @@
 # These are all the cops that are enabled in the default configuration.
 
-Style/AccessModifierIndentation:
+Layout/AccessModifierIndentation:
   Description: Check indentation of private/protected visibility modifiers.
   Enabled: true
 
@@ -8,16 +8,16 @@ Style/Alias:
   Description: "Use alias_method instead of alias."
   Enabled: true
 
-Style/AlignHash:
+Layout/AlignHash:
   Description: >-
-                 Align the elements of a hash literal if they span more than
-                 one line.
+    Align the elements of a hash literal if they span more than
+    one line.
   Enabled: true
 
-Style/AlignParameters:
+Layout/AlignParameters:
   Description: >-
-                 Align the parameters of a method call if they span more
-                 than one line.
+    Align the parameters of a method call if they span more
+    than one line.
   Enabled: true
 
 Style/AndOr:
@@ -54,9 +54,9 @@ Metrics/BlockNesting:
 
 Style/BlockDelimiters:
   Description: >-
-                Avoid using {...} for multi-line blocks (multiline chaining is
-                always ugly).
-                Prefer {...} over do...end for single-line blocks.
+    Avoid using {...} for multi-line blocks (multiline chaining is
+    always ugly).
+    Prefer {...} over do...end for single-line blocks.
   Enabled: true
 
 Style/BracesAroundHashParameters:
@@ -67,7 +67,7 @@ Style/CaseEquality:
   Description: "Avoid explicit use of the case equality operator(===)."
   Enabled: true
 
-Style/CaseIndentation:
+Layout/CaseIndentation:
   Description: "Indentation of when in a case/when/[else/]end."
   Enabled: true
 
@@ -105,11 +105,11 @@ Style/ColonMethodCall:
 
 Style/CommentAnnotation:
   Description: >-
-                 Checks formatting of special comments
-                 (TODO, FIXME, OPTIMIZE, HACK, REVIEW).
+    Checks formatting of special comments
+    (TODO, FIXME, OPTIMIZE, HACK, REVIEW).
   Enabled: true
 
-Style/CommentIndentation:
+Layout/CommentIndentation:
   Description: "Indentation of comments."
   Enabled: true
 
@@ -121,7 +121,7 @@ Style/DefWithParentheses:
   Description: "Use def with parentheses when there are arguments."
   Enabled: true
 
-Style/DeprecatedHashMethods:
+Style/PreferredHashMethods:
   Description: "Checks for use of deprecated Hash methods."
   Enabled: true
 
@@ -129,39 +129,35 @@ Style/Documentation:
   Description: "Document classes and non-namespace modules."
   Enabled: true
 
-Style/DotPosition:
+Layout/DotPosition:
   Description: "Checks the position of the dot in multi-line method calls."
-  Enabled: true
-
-Style/DoubleNegation:
-  Description: "Checks for uses of double negation (!!)."
   Enabled: true
 
 Style/EachWithObject:
   Description: "Prefer `each_with_object` over `inject` or `reduce`."
   Enabled: true
 
-Style/EmptyLineBetweenDefs:
+Layout/EmptyLineBetweenDefs:
   Description: "Use empty lines between defs."
   Enabled: true
 
-Style/EmptyLines:
+Layout/EmptyLines:
   Description: "Don't use several empty lines in a row."
   Enabled: true
 
-Style/EmptyLinesAroundAccessModifier:
+Layout/EmptyLinesAroundAccessModifier:
   Description: "Keep blank lines around access modifiers."
   Enabled: true
 
-Style/EmptyLinesAroundBlockBody:
+Layout/EmptyLinesAroundBlockBody:
   Description: "Keeps track of empty lines around expression bodies."
   Enabled: true
 
-Style/EmptyLinesAroundClassBody:
+Layout/EmptyLinesAroundClassBody:
   Description: "Keeps track of empty lines around expression classes."
   Enabled: true
 
-Style/EmptyLinesAroundModuleBody:
+Layout/EmptyLinesAroundModuleBody:
   Description: "Keeps track of empty lines around expression modules."
   Enabled: true
 
@@ -169,15 +165,11 @@ Style/EmptyLiteral:
   Description: "Prefer literals to Array.new/Hash.new/String.new."
   Enabled: true
 
-Style/Encoding:
-  Description: "Use UTF-8 as the source file encoding."
-  Enabled: true
-
 Style/EndBlock:
   Description: "Avoid the use of END blocks."
   Enabled: true
 
-Style/EndOfLine:
+Layout/EndOfLine:
   Description: "Use Unix-style line endings."
   Enabled: true
 
@@ -211,68 +203,64 @@ Style/GuardClause:
 
 Style/HashSyntax:
   Description: >-
-                 Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax
-                 { :a => 1, :b => 2 }.
+    Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax
+    { :a => 1, :b => 2 }.
   Enabled: true
 
 Style/IfUnlessModifier:
   Description: >-
-                 Favor modifier if/unless usage when you have a
-                 single-line body.
+    Favor modifier if/unless usage when you have a
+    single-line body.
   Enabled: true
 
 Style/IfWithSemicolon:
   Description: "Never use if x; .... Use the ternary operator instead."
   Enabled: true
 
-Style/IndentationConsistency:
+Layout/IndentationConsistency:
   Description: "Keep indentation straight."
   Enabled: true
 
-Style/IndentationWidth:
+Layout/IndentationWidth:
   Description: "Use 2 spaces for indentation."
   Enabled: true
 
-Style/IndentArray:
+Layout/IndentArray:
   Description: >-
-                 Checks the indentation of the first element in an array
-                 literal.
+    Checks the indentation of the first element in an array
+    literal.
   Enabled: true
 
-Style/IndentHash:
+Layout/IndentHash:
   Description: "Checks the indentation of the first key in a hash literal."
-  Enabled: true
-
-Style/Lambda:
-  Description: "Use the new lambda literal syntax for single-line blocks."
   Enabled: true
 
 Style/LambdaCall:
   Description: "Use lambda.call(...) instead of lambda.(...)."
   Enabled: true
 
-Style/LeadingCommentSpace:
+Layout/LeadingCommentSpace:
   Description: "Comments should start with a space."
   Enabled: true
 
 Style/LineEndConcatenation:
   Description: >-
-                 Use \ instead of + or << to concatenate two string literals at
-                 line end.
+    Use \ instead of + or << to concatenate two string literals at
+    line end.
   Enabled: true
 
 Metrics/LineLength:
   Description: "Limit lines to 80 characters."
   Enabled: true
 
-Style/MethodCallParentheses:
+Style/MethodCallWithoutArgsParentheses:
   Description: "Do not use parentheses for method calls with no arguments."
   Enabled: true
 
 Style/MethodDefParentheses:
   Description: >-
-                 Checks if the method definitions have or don"t have
-                 parentheses.
+    Checks if the method definitions have or don"t have
+    parentheses.
   Enabled: true
 
 Style/MethodName:
@@ -283,24 +271,20 @@ Style/ModuleFunction:
   Description: "Checks for usage of `extend self` in modules."
   Enabled: true
 
-Style/MultilineBlockChain:
-  Description: "Avoid multi-line chains of blocks."
-  Enabled: true
-
 Style/MultilineIfThen:
   Description: "Never use then for multi-line if/unless."
   Enabled: true
 
 Style/MultilineTernaryOperator:
   Description: >-
-                 Avoid multi-line ?: (the ternary operator);
-                 use if/unless instead.
+    Avoid multi-line ?: (the ternary operator);
+    use if/unless instead.
   Enabled: true
 
 Style/NegatedIf:
   Description: >-
-                 Favor unless over if for negative conditions
-                 (or control flow or).
+    Favor unless over if for negative conditions
+    (or control flow or).
   Enabled: true
 
 Style/NegatedWhile:
@@ -329,14 +313,14 @@ Style/Not:
 
 Style/NumericLiterals:
   Description: >-
-                 Add underscores to large numeric literals to improve their
-                 readability.
+    Add underscores to large numeric literals to improve their
+    readability.
   Enabled: true
 
 Style/OneLineConditional:
   Description: >-
-                 Favor the ternary operator(?:) over
-                 if/then/else/end constructs.
+    Favor the ternary operator(?:) over
+    if/then/else/end constructs.
   Enabled: true
 
 Style/OpMethod:
@@ -345,8 +329,8 @@ Style/OpMethod:
 
 Style/ParenthesesAroundCondition:
   Description: >-
-                 Don't use parentheses around the condition of an
-                 if/unless/while.
+    Don't use parentheses around the condition of an
+    if/unless/while.
   Enabled: true
 
 Style/PercentLiteralDelimiters:
@@ -381,18 +365,6 @@ Style/RedundantReturn:
   Description: "Don't use return where it's not required."
   Enabled: true
 
-Style/RedundantSelf:
-  Description: "Don't use self where it's not needed."
-  Enabled: true
-
-Style/RegexpLiteral:
-  Description: >-
-                 Use %r for regular expressions matching more than
-                 `MaxSlashes` '/' characters.
-                 Use %r only for regular expressions matching more than
-                 `MaxSlashes` '/' character.
-  Enabled: true
-
 Style/RescueModifier:
   Description: "Avoid using rescue in its modifier form."
   Enabled: true
@@ -417,89 +389,81 @@ Style/SingleLineMethods:
   Description: "Avoid single-line methods."
   Enabled: true
 
-Style/SingleSpaceBeforeFirstArg:
+Layout/SpaceBeforeFirstArg:
   Description: >-
-                 Checks that exactly one space is used between a method name
-                 and the first argument for method calls without parentheses.
+    Checks that exactly one space is used between a method name
+    and the first argument for method calls without parentheses.
   Enabled: true
 
-Style/SpaceAfterColon:
+Layout/SpaceAfterColon:
   Description: "Use spaces after colons."
   Enabled: true
 
-Style/SpaceAfterComma:
+Layout/SpaceAfterComma:
   Description: "Use spaces after commas."
   Enabled: true
 
-Style/SpaceAfterControlKeyword:
-  Description: "Use spaces after if/elsif/unless/while/until/case/when."
-  Enabled: true
-
-Style/SpaceAfterMethodName:
+Layout/SpaceAfterMethodName:
   Description: >-
-                 Never put a space between a method name and the opening
-                 parenthesis in a method definition.
+    Never put a space between a method name and the opening
+    parenthesis in a method definition.
   Enabled: true
 
-Style/SpaceAfterNot:
+Layout/SpaceAfterNot:
   Description: Tracks redundant space after the ! operator.
   Enabled: true
 
-Style/SpaceAfterSemicolon:
+Layout/SpaceAfterSemicolon:
   Description: "Use spaces after semicolons."
   Enabled: true
 
-Style/SpaceBeforeBlockBraces:
+Layout/SpaceBeforeBlockBraces:
   Description: >-
-                 Checks that the left block brace has or doesn't have space
-                 before it.
+    Checks that the left block brace has or doesn't have space
+    before it.
   Enabled: true
 
-Style/SpaceBeforeComma:
+Layout/SpaceBeforeComma:
   Description: "No spaces before commas."
   Enabled: true
 
-Style/SpaceBeforeComment:
+Layout/SpaceBeforeComment:
   Description: >-
-                 Checks for missing space between code and a comment on the
-                 same line.
+    Checks for missing space between code and a comment on the
+    same line.
   Enabled: true
 
-Style/SpaceBeforeSemicolon:
+Layout/SpaceBeforeSemicolon:
   Description: "No spaces before semicolons."
   Enabled: true
 
-Style/SpaceInsideBlockBraces:
+Layout/SpaceInsideBlockBraces:
   Description: >-
-                 Checks that block braces have or don't have surrounding space.
-                 For blocks taking parameters, checks that the left brace has
-                 or doesn"t have trailing space.
+    Checks that block braces have or don't have surrounding space.
+    For blocks taking parameters, checks that the left brace has
+    or doesn"t have trailing space.
   Enabled: true
 
-Style/SpaceAroundEqualsInParameterDefault:
+Layout/SpaceAroundEqualsInParameterDefault:
   Description: >-
-                 Checks that the equals signs in parameter default assignments
-                 have or don't have surrounding space depending on
-                 configuration.
+    Checks that the equals signs in parameter default assignments
+    have or don't have surrounding space depending on
+    configuration.
   Enabled: true
 
-Style/SpaceAroundOperators:
+Layout/SpaceAroundOperators:
   Description: "Use spaces around operators."
   Enabled: true
 
-Style/SpaceBeforeModifierKeyword:
-  Description: "Put a space before the modifier keyword."
-  Enabled: true
-
-Style/SpaceInsideBrackets:
+Layout/SpaceInsideBrackets:
   Description: "No spaces after [ or before ]."
   Enabled: true
 
-Style/SpaceInsideHashLiteralBraces:
+Layout/SpaceInsideHashLiteralBraces:
   Description: "Use spaces inside hash literal braces - or don't."
   Enabled: true
 
-Style/SpaceInsideParens:
+Layout/SpaceInsideParens:
   Description: "No spaces after ( or before )."
   Enabled: true
 
@@ -511,19 +475,19 @@ Style/StringLiterals:
   Description: "Checks if uses of quotes match the configured preference."
   Enabled: true
 
-Style/Tab:
+Layout/Tab:
   Description: "No hard tabs."
   Enabled: true
 
-Style/TrailingBlankLines:
+Layout/TrailingBlankLines:
   Description: "Checks trailing blank lines and final newline."
   Enabled: true
 
-Style/TrailingComma:
+Style/TrailingCommaInLiteral:
   Description: "Checks for trailing comma in parameter lists and literals."
   Enabled: true
 
-Style/TrailingWhitespace:
+Layout/TrailingWhitespace:
   Description: "Avoid trailing whitespace."
   Enabled: true
 
@@ -533,8 +497,8 @@ Style/TrivialAccessors:
 
 Style/UnlessElse:
   Description: >-
-                 Never use unless with else. Rewrite these with the positive
-                 case first.
+    Never use unless with else. Rewrite these with the positive
+    case first.
   Enabled: true
 
 Style/UnneededCapitalW:
@@ -547,8 +511,8 @@ Style/CommandLiteral:
 
 Style/VariableInterpolation:
   Description: >-
-                 Don't interpolate global, instance and class variables
-                 directly in strings.
+    Don't interpolate global, instance and class variables
+    directly in strings.
   Enabled: true
 
 Style/VariableName:
@@ -565,8 +529,8 @@ Style/WhileUntilDo:
 
 Style/WhileUntilModifier:
   Description: >-
-                 Favor modifier while/until usage when you have a
-                 single-line body.
+    Favor modifier while/until usage when you have a
+    single-line body.
   Enabled: true
 
 Style/WordArray:
@@ -578,14 +542,14 @@ Style/WordArray:
 
 Lint/AmbiguousOperator:
   Description: >-
-                 Checks for ambiguous operators in the first argument of a
-                 method invocation without parentheses.
+    Checks for ambiguous operators in the first argument of a
+    method invocation without parentheses.
   Enabled: true
 
 Lint/AmbiguousRegexpLiteral:
   Description: >-
-                 Checks for ambiguous regexp literals in the first argument of
-                 a method invocation without parenthesis.
+    Checks for ambiguous regexp literals in the first argument of
+    a method invocation without parenthesis.
   Enabled: true
 
 Lint/BlockAlignment:
@@ -620,10 +584,6 @@ Lint/EmptyInterpolation:
   Description: "Checks for empty string interpolation."
   Enabled: true
 
-Lint/EndAlignment:
-  Description: "Align ends correctly."
-  Enabled: true
-
 Lint/EndInMethod:
   Description: "END blocks should not be placed inside method definitions."
   Enabled: true
@@ -632,7 +592,7 @@ Lint/EnsureReturn:
   Description: "Never use return in an ensure block."
   Enabled: true
 
-Lint/Eval:
+Security/Eval:
   Description: "The use of eval represents a serious security risk."
   Enabled: true
 
@@ -642,8 +602,8 @@ Lint/HandleExceptions:
 
 Lint/InvalidCharacterLiteral:
   Description: >-
-                 Checks for invalid character literals with a non-escaped
-                 whitespace character.
+    Checks for invalid character literals with a non-escaped
+    whitespace character.
   Enabled: true
 
 Lint/LiteralInCondition:
@@ -656,20 +616,20 @@ Lint/LiteralInInterpolation:
 
 Lint/Loop:
   Description: >-
-                 Use Kernel#loop with break rather than begin/end/until or
-                 begin/end/while for post-loop tests.
+    Use Kernel#loop with break rather than begin/end/until or
+    begin/end/while for post-loop tests.
   Enabled: true
 
 Lint/ParenthesesAsGroupedExpression:
   Description: >-
-                 Checks for method calls with a space before the opening
-                 parenthesis.
+    Checks for method calls with a space before the opening
+    parenthesis.
   Enabled: true
 
 Lint/RequireParentheses:
   Description: >-
-                 Use parentheses in the method call to avoid confusion
-                 about precedence.
+    Use parentheses in the method call to avoid confusion
+    about precedence.
   Enabled: true
 
 Lint/RescueException:
@@ -678,14 +638,8 @@ Lint/RescueException:
 
 Lint/ShadowingOuterLocalVariable:
   Description: >-
-                 Do not use the same name as outer local variable
-                 for block arguments or block local variables.
-  Enabled: true
-
-Lint/SpaceBeforeFirstArg:
-  Description: >-
-                 Put a space between a method name and the first argument
-                 in a method call without parentheses.
+    Do not use the same name as outer local variable
+    for block arguments or block local variables.
   Enabled: true
 
 Lint/StringConversionInInterpolation:
@@ -736,10 +690,6 @@ Lint/Void:
 
 Rails/ActionFilter:
   Description: "Enforces consistent use of action filter methods."
-  Enabled: true
-
-Rails/DefaultScope:
-  Description: "Checks if the argument passed to default_scope is a block."
   Enabled: true
 
 Rails/Delegate:

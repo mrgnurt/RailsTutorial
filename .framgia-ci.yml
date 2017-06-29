@@ -1,5 +1,7 @@
 project_type: ruby
 test:
+  rails_best_practices:
+    command: rails_best_practices --format html --output-file .framgia-ci-reports/rails_best_practices.html app/
   bundle-audit:
     command: bundle-audit check --update | tee .framgia-ci-reports/bundle-audit.txt
   rspec:
@@ -13,6 +15,4 @@ test:
   scss-lint:
     command: scss-lint --require=scss_lint_reporter_checkstyle --format=Checkstyle --out=.framgia-ci-reports/scss-lint.xml app/assets/stylesheets/
   eslint:
-    command: rake eslint:run_all --format=checkstyle --output-file=.framgia-ci-reports/eslint.xml app/
-  rails_best_practices:
-    command: rails_best_practices --format html --output-file .framgia-ci-reports/rails_best_practices.html app/
+    command: sudo eslint --format=checkstyle --output-file=.framgia-ci-reports/eslint.xml app/

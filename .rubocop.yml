@@ -7,31 +7,35 @@ inherit_from:
   - .rubocop_disabled.yml
 
 # Common configuration.
-AllCops:
-  # Include gemspec and Rakefile
-  Include:
-    - '**/*.gemspec'
-  Exclude:
-    - 'vendor/**/*'
-    - 'config/unicorn.rb'
-    - 'bin/*'
-    - 'db/**/*'
-    - 'spec/**/*'
-    - 'script/rails'
-    - 'config/**/*'
-  # By default, the rails cops are not run. Override in project or home
-  # directory .rubocop.yml files, or by giving the -R/--rails option.
-  RunRailsCops: false
+Rails:
+  Enabled: true
 
+Metrics/BlockLength:
+  Exclude:
+    - Rakefile
+    - spec/**/**/*.rb
+
+AllCops:
+  TargetRubyVersion: 2.2
+  Exclude:
+    - db/schema.rb
+    - lib/tasks/**/*.rake
+    - test/**
+    - config/initializers/**
+    - config/environments/**
+    - db/migrate/**
+    - spec/controllers/**
+    - spec/**
+    - app/models/**
 # Indent private/protected/public as deep as method definitions
-Style/AccessModifierIndentation:
+Layout/AccessModifierIndentation:
   EnforcedStyle: indent
   SupportedStyles:
     - outdent
     - indent
 
 # Align the elements of a hash literal if they span more than one line.
-Style/AlignHash:
+Layout/AlignHash:
   # Alignment of entries using hash rocket as separator. Valid values are:
   #
   # key - left alignment of keys
@@ -94,7 +98,7 @@ Style/AlignHash:
     - ignore_implicit
     - ignore_explicit
 
-Style/AlignParameters:
+Layout/AlignParameters:
   # Alignment of parameters in multi-line method calls.
   #
   # The `with_first_parameter` style aligns the following lines along the same column
@@ -116,11 +120,6 @@ Style/AlignParameters:
 Metrics/BlockNesting:
   Max: 3
 
-Metrics/AbcSize:
-  # The ABC size is a calculated magnitude, so this number can be a Fixnum or
-  # a Float.
-  Max: 20
-
 Style/BracesAroundHashParameters:
   EnforcedStyle: no_braces
   SupportedStyles:
@@ -128,8 +127,8 @@ Style/BracesAroundHashParameters:
     - no_braces
 
 # Indentation of `when`.
-Style/CaseIndentation:
-  IndentWhenRelativeTo: case
+Layout/CaseIndentation:
+  EnforcedStyle: case
   SupportedStyles:
     - case
     - end
@@ -195,29 +194,29 @@ Metrics/CyclomaticComplexity:
   Max: 6
 
 # Multi-line method chaining should be done with leading dots.
-Style/DotPosition:
+Layout/DotPosition:
   EnforcedStyle: leading
   SupportedStyles:
     - leading
     - trailing
 
 # Use empty lines between defs.
-Style/EmptyLineBetweenDefs:
+Layout/EmptyLineBetweenDefs:
   # If true, this parameter means that single line method definitions don't
   # need an empty line between them.
   AllowAdjacentOneLineDefs: false
 
-Style/EmptyLinesAroundBlockBody:
+Layout/EmptyLinesAroundBlockBody:
   EnforcedStyle: no_empty_lines
   SupportedStyles:
     - no_empty_lines
 
-Style/EmptyLinesAroundClassBody:
+Layout/EmptyLinesAroundClassBody:
   EnforcedStyle: no_empty_lines
   SupportedStyles:
     - no_empty_lines
 
-Style/EmptyLinesAroundModuleBody:
+Layout/EmptyLinesAroundModuleBody:
   EnforcedStyle: no_empty_lines
   SupportedStyles:
     - no_empty_lines
@@ -269,7 +268,7 @@ Style/IfUnlessModifier:
   MaxLineLength: 80
 
 # Checks the indentation of the first key in a hash literal.
-Style/IndentHash:
+Layout/IndentHash:
   # The value `special_inside_parentheses` means that hash literals with braces
   # that have their opening brace on the same line as a surrounding opening
   # round parenthesis, shall have their first key indented relative to the
@@ -289,7 +288,7 @@ Style/LambdaCall:
     - braces
 
 Metrics/LineLength:
-  Max: 120
+  Max: 80
   AllowURI: true
   Exclude:
     - config/routes.rb
@@ -322,6 +321,12 @@ Style/MethodDefParentheses:
 Metrics/MethodLength:
   CountComments: false  # count full line comments?
   Max: 10
+
+Metrics/BlockLength:
+  CountComments: false  # count full line comments?
+  Max: 25
+  Exclude:
+    - config/**/*.rb
 
 Style/MethodName:
   EnforcedStyle: snake_case
@@ -367,11 +372,6 @@ Style/RedundantReturn:
   # When true allows code like `return x, y`.
   AllowMultipleReturnValues: false
 
-#Style/RegexpLiteral:
-#  # The maximum number of (escaped) slashes that a slash-delimited regexp is
-#  # allowed to have. If there are more slashes, a %r regexp shall be used.
-#  MaxSlashes: 0
-
 Style/Semicolon:
   # Allow ; to separate several expressions on the same line.
   AllowAsExpressionSeparator: false
@@ -402,19 +402,19 @@ Style/StringLiterals:
     - single_quotes
     - double_quotes
 
-Style/SpaceAroundEqualsInParameterDefault:
+Layout/SpaceAroundEqualsInParameterDefault:
   EnforcedStyle: space
   SupportedStyles:
     - space
     - no_space
 
-Style/SpaceBeforeBlockBraces:
+Layout/SpaceBeforeBlockBraces:
   EnforcedStyle: no_space
   SupportedStyles:
     - space
     - no_space
 
-Style/SpaceInsideBlockBraces:
+Layout/SpaceInsideBlockBraces:
   EnforcedStyle: no_space
   SupportedStyles:
     - space
@@ -424,20 +424,20 @@ Style/SpaceInsideBlockBraces:
   # Space between { and |. Overrides EnforcedStyle if there is a conflict.
   SpaceBeforeBlockParameters: false
 
-Style/SpaceInsideHashLiteralBraces:
+Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
   EnforcedStyleForEmptyBraces: no_space
   SupportedStyles:
     - space
     - no_space
 
-Style/TrailingBlankLines:
+Layout/TrailingBlankLines:
   EnforcedStyle: final_newline
   SupportedStyles:
     - final_newline
     - final_blank_line
 
-Style/TrailingComma:
+Style/TrailingCommaInLiteral:
   # If EnforcedStyleForMultiline is comma, the cop allows a comma after the
   # last item of a list, but only for lists where each item is on its own line.
   EnforcedStyleForMultiline: no_comma
@@ -503,7 +503,7 @@ Lint/EndAlignment:
   # The value `variable` means that in assignments, `end` should be aligned
   # with the start of the variable on the left hand side of `=`. In all other
   # situations, `end` should still be aligned with the keyword.
-  AlignWith: keyword
+  EnforcedStyleAlignWith: keyword
   SupportedStyles:
     - keyword
     - variable
@@ -513,7 +513,7 @@ Lint/DefEndAlignment:
   # The value `start_of_line` means that `end` should be aligned with method
   # calls like `private`, `public`, etc, if present in front of the `def`
   # keyword on the same line.
-  AlignWith: start_of_line
+  EnforcedStyleAlignWith: start_of_line
   SupportedStyles:
     - start_of_line
     - def
@@ -527,10 +527,6 @@ Rails/ActionFilter:
     - filter
   Include:
     - app/controllers/**/*.rb
-
-Rails/DefaultScope:
-  Include:
-    - app/models/**/*.rb
 
 Rails/HasAndBelongsToMany:
   Include:
@@ -547,3 +543,6 @@ Rails/ScopeArgs:
 Rails/Validation:
   Include:
     - app/models/**/*.rb
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented

@@ -31,9 +31,20 @@
 
 en:
   hello: "Hello world"
+  layouts:
+    footer:
+      about: "About"
+      contact: "Contact"
+      news: "News"
+    application:
+      sample_app: "sample app"
+      home: "Home"
+      help: "Help"
+      login: "Log in"
   static_pages:
     title_page_general: " | Ruby on Rails Tutorial Sample App"
     ruby: "Ruby on Rails Tutorial"
+    author: "michaelhartl"
     home:
       title_page: "Home"
       this: "This is the home page for the"
@@ -48,3 +59,7 @@ en:
       book: "book"
       the: "The"
       is: "is a"
+    contact:
+      title_page: "Contact"
+      content: "Contact the Ruby on Rails Tutorial about the sample app at the"
+      contact_page: "contact page"
