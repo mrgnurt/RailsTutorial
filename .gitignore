@@ -26,3 +26,10 @@ config/database.yml
 config/secrets.yml
 .framgia-ci-result.temp.yml
 .framgia-ci-reports/
+#git config
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+config/settings/development.yml
+config/settings/production.yml
+config/settings/test.yml
