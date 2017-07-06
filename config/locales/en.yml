@@ -31,6 +31,11 @@
 
 en:
   hello: "Hello world"
+  error: "error"
+  wellcome: "wellcome to app"
+  not_found: "Not found User"
+  the_form_contains: "The form contains"
+  sign_up: "Sign up"
   layouts:
     footer:
       about: "About"
@@ -63,3 +68,7 @@ en:
       title_page: "Contact"
       content: "Contact the Ruby on Rails Tutorial about the sample app at the"
       contact_page: "contact page"
+  users:
+    new:
+      confirmation: Confirmation   
+      create_my_account: Create my account

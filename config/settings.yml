@@ -1,3 +1,4 @@
 name_max_length: 50
 password_max_length: 6
 email_max_length: 250
+max_size: 80
