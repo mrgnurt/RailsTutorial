@@ -5,4 +5,6 @@ FeatureEnvy:
 UncommunicativeVariableName:
   enabled: false
 InstanceVariableAssumption:
-  enabled: false  
+  enabled: false
+TooManyStatements:
+  enabled: false

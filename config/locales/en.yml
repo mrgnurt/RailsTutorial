@@ -36,7 +36,13 @@ en:
   not_found: "Not found User"
   the_form_contains: "The form contains"
   sign_up: "Sign up"
+  log_in: "Log in"
+  new_user?: "New user?"
+  sign_up_now: "Sign up now!"
+  invalid: "Invalid email/password combination"
   layouts:
+    header:
+      users: "User"
     footer:
       about: "About"
       contact: "Contact"
