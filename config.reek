@@ -8,3 +8,5 @@ InstanceVariableAssumption:
   enabled: false
 TooManyStatements:
   enabled: false
+Attribute:
+  enabled: false
