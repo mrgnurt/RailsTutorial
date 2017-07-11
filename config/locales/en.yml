@@ -48,6 +48,14 @@ en:
   all_users: "All users"
   you_sure: "You sure?"
   user_deleted: "User deleted"
+  sample_app: "Sample App"
+  account_activation: "Account activation"
+  hi: "Hi "
+  activated: "Account activated!"
+  welcome_mail: "wellcome mail"
+  invalid_activation_link: "Invalid activation link"
+  check_email: "Please check your email to activate your account."
+  create_my_account: "Create"
   layouts:
     header:
       users: "User"
