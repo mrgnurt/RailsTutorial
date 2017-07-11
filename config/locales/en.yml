@@ -40,6 +40,14 @@ en:
   new_user?: "New user?"
   sign_up_now: "Sign up now!"
   invalid: "Invalid email/password combination"
+  update_profile: "Update your profile"
+  edit_user: "Edit user"
+  save_changes: "Save changes"
+  profile_updated: "Profile updated"
+  please_log_in: "Please log in."
+  all_users: "All users"
+  you_sure: "You sure?"
+  user_deleted: "User deleted"
   layouts:
     header:
       users: "User"
