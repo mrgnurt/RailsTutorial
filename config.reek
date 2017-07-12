@@ -10,3 +10,5 @@ TooManyStatements:
   enabled: false
 Attribute:
   enabled: false
+DuplicateMethodCall:
+  enabled: false
