@@ -68,6 +68,18 @@ en:
   can't_be_empty: "can't be empty"
   pw_has_been_reset: "Password has been reset."
   password_expired: "Password reset has expired."
+  ago: "ago."
+  microposts: "Microposts "
+  micropost_created: "Microposts created"
+  micropost_feed: "Micropost Feed"
+  micropost: "micropost"
+  new_micropost: "Compose new micropost..."
+  post: "Post"
+  micropost_created: "Micropost created"
+  failed_to_create: "Micropost failed to create"
+  delete: "delete"
+  micropost_deleted: "Micropost deleted"
+  less_than_5MB: "Picture should be less than 5MB"
   layouts:
     header:
       users: "User"

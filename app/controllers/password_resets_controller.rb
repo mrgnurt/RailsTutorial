@@ -1,5 +1,5 @@
 class PasswordResetsController < ApplicationController
-  before_action :find_user, :valid_user,   
+  before_action :find_user, :valid_user,
     :check_expiration, only: [:edit, :update]
   attr_reader :user
 
@@ -23,14 +23,12 @@ class PasswordResetsController < ApplicationController
   def update
     if params[:user][:password].empty?
       user.errors.add :password, t("can't_be_empty")
-      render :edit
     elsif user.update_attributes user_params
       log_in user
       flash[:success] = t "pw_has_been_reset"
       redirect_to user
-    else
-      render :edit
     end
+    render :edit
   end
 
   private
