@@ -34,3 +34,5 @@ config/settings/development.yml
 config/settings/production.yml
 config/settings/test.yml
 config/application.yml
+public/javascripts/*
+public/uploads/*
