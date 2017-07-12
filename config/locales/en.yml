@@ -56,6 +56,18 @@ en:
   invalid_activation_link: "Invalid activation link"
   check_email: "Please check your email to activate your account."
   create_my_account: "Create"
+  forgot_password: "Forgot password?"
+  forgot_pw: "Forgot password"
+  submit: "Submit"
+  email_sent: "Email sent with password reset instructions"
+  email_not_found: "Email address not found"
+  click_below: "To reset your password click the link below:"
+  password_reset: "Password reset"
+  reset_password: "Reset password"
+  update_password: "Update password"
+  can't_be_empty: "can't be empty"
+  pw_has_been_reset: "Password has been reset."
+  password_expired: "Password reset has expired."
   layouts:
     header:
       users: "User"
