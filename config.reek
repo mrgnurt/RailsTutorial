@@ -10,5 +10,5 @@ TooManyStatements:
   enabled: false
 Attribute:
   enabled: false
-DuplicateMethodCall:
+TooManyMethods:
   enabled: false

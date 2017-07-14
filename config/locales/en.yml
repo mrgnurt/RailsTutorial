@@ -80,6 +80,8 @@ en:
   delete: "delete"
   micropost_deleted: "Micropost deleted"
   less_than_5MB: "Picture should be less than 5MB"
+  following: "following"
+  followers: "followers"
   layouts:
     header:
       users: "User"
