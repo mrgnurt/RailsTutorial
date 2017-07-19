@@ -4,3 +4,4 @@ email_max_length: 250
 max_size: 80
 default_gravatar_size: 50
 content_max_length: 140
+gravatar_follow: 30
