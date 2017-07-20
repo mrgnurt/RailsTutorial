@@ -5,6 +5,7 @@ $color1: #777;
 $color2: #eaeaea;
 $color3: #bbb;
 $red: #ff0;
+$blue: #00f;
 
 @mixin box-sizing {
   box-sizing: border-box;
@@ -233,5 +234,45 @@ error-explanation {
 
   input {
     border: 0;
+  }
+}
+
+.stats {
+  margin-top: 0;
+  overflow: auto;
+  padding: 0;
+
+  a {
+    border-left: 1px solid $color1;
+    color: $color1;
+    float: left;
+    padding: 0 10px;
+
+    &:first-child {
+      border: 0;
+      padding-left: 0;
+    }
+
+    &:hover {
+      color: $blue;
+      text-decoration: none;
+    }
+  }
+
+  strong {
+    display: block;
+  }
+}
+
+.user-avatars {
+  margin-top: 10px;
+  overflow: auto;
+
+  .gravatar {
+    margin: 1px;
+  }
+
+  a {
+    padding: 0;
   }
 }
